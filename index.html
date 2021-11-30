@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Space Junk</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="canvas.js"></script>
+	</head>
+
+	<body>
+		<div id="resources" style="display:none">
+			<img id="wrench-img"     src="res/images/wrench.png">
+			<img id="player-1-img"   src="res/images/player1.png">
+			<img id="player-2-img"   src="res/images/player2.png">
+			<img id="rock-img"       src="res/images/asteroid.png">
+			<img id="ship-img"       src="res/images/ScrapMetal.png">
+			<img id="red-heart-img"  src="res/images/RedHeart.png">
+			<img id="gold-heart-img" src="res/images/GoldHeart.png">
+
+			<audio loop id="soundtrack-menu" src="res/audio/looping/Game-Menu_Looping.mp3"/>
+			<audio loop id="soundtrack-game" src="res/audio/looping/Light-Years_Looping.mp3"/>
+			<audio loop id="soundtrack-win"  src="res/audio/looping/Blazing-Stars_Looping.mp3"/>
+
+			<audio id="clank-sound" src="res/audio/sfx/Clank.mp3"/>
+			<audio id="chime-sound" src="res/audio/sfx/SynthChime.mp3"/>
+			<audio id="metal-sound" src="res/audio/sfx/MetalCrash.mp3"/>
+			<audio id="rock-sound"  src="res/audio/sfx/StoneCrash.mp3"/>
+			<audio id="end-sound"   src="res/audio/sfx/GameOver.mp3"/>
+		</div>
+		
+		<div id="content">
+			<button id="load-game">Lᴏᴀᴅ Gᴀᴍᴇ</button>
+
+			<div id="canvas-container">
+			</div>
+			
+			<form id="controls" style="display:none">
+				<span class="slider-container">
+					<label for="music-gain">♬</label>
+					<input id="music-gain" type="range" min="0" max="1" step="0.01" value="0.5">
+				</span>
+				<span class="slider-container">
+					<label for="sfx-gain">🔊</label>
+					<input id="sfx-gain"   type="range" min="0" max="1" step="0.01" value="0.5">
+				</span>
+			</form>
+			
+			<script src="script.js"></script>
+		</div>
+	</body>
+</html>
